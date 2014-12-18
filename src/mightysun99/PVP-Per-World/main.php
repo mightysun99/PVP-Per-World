@@ -7,6 +7,10 @@ use pocketmine\event\entity\EntityDamageEvent;
 class Main extends PluginBase implements Listener{
       private $WorldOn;
       private $WorldOff
+      
+public function onEnable() {
+    	@mkdir($this->getDataFolder());
+        $this->configFile = (new Config($this->getDataFolder()."config.yml", Config::YAML, array()))->getAll();
 
 public function onHurt(EntityDamageEvent $event) {
       $entity = $event->getEntity();
