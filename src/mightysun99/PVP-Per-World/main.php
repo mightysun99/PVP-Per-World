@@ -4,6 +4,10 @@ namespace mightysun99\PVP-Per-World;
 
 use pocketmine\event\entity\EntityDamageEvent;
 
+class Main extends PluginBase implements Listener{
+      private $WorldOn;
+      private $WorldOff
+
 public function onHurt(EntityDamageEvent $event) {
       $entity = $event->getEntity();
       $level = $event->getLevel()->getLevelName();
