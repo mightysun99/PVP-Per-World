@@ -6,7 +6,7 @@ use pocketmine\event\entity\EntityDamageEvent;
 
 class Main extends PluginBase implements Listener{
       private $WorldOn;
-      private $WorldOff
+      private $WorldOff;
       
 public function onEnable() {
     	@mkdir($this->getDataFolder());
