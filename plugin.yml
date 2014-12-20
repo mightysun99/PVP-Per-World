@@ -1,0 +1,6 @@
+name: PVP-Per-World
+version: 1.0
+api: [1.8.0]
+author: mightysun99
+main: mightysun99\PVP-Per-World\main
+load: POSTWORLD
