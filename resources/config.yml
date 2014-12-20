@@ -1,5 +1,2 @@
-#Worlds with PVP on
-WorldOn:
-
-#Worlds with PVP off
-WorldOff:
+#Enable PvP in the following world
+WorldOn: false
