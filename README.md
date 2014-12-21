@@ -6,7 +6,7 @@ Summary
 
 Features
 
-    Toggle PVP per user per world
+    Toggle PVP per world
     Simple config structure.
 
 Example
