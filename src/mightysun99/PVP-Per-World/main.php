@@ -7,13 +7,14 @@ use pocketmine\plugin\PluginBase;
 
 class Main extends PluginBase implements Listener{
       private $WorldOn;
-      
+      private $worldname;
 public function onEnable() {
     	$config = $this->getConfig();
     	$this->WorldOn = $config->get("WorldOn");
-    	if($this->WorldOn == "false"){ //This checks to see if the config has been edited or not
-    	      $this->getLogger()->info("Please set your PVP-enabled world in the config.");
-    	}
+    	$this->worldname = $config->get("LevelForPVP");
+    	/*if($this->WorldOn == "false"){ //This checks to see if the config has been edited or not
+    	      //$this->getLogger()->info("Please set your PVP-enabled world in the config.");
+    	}     WHY???          */
 }
 
 public function onDisable(){
@@ -24,11 +25,14 @@ public function onHurt(EntityDamageEvent $event) {
       $entity = $event->getEntity();
       $level = $event->getLevel()->getLevelName();
       if($entity instanceof Player) {
-            if($level == "world"){
+        if(!$this->WorldOn == "false"){
+            if($level == $this->worldname){
             //pvp only for world with name "world"
             }else{
                   //for other worlds
                   $event->setCancelled();
             }
+            $event->setCancelled();
+        }
       }
 }
