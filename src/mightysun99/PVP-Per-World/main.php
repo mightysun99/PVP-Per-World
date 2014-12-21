@@ -32,6 +32,7 @@ public function onHurt(EntityDamageEvent $event) {
                   //for other worlds
                   $event->setCancelled();
             }
+            $event->setCancelled();
         }
       }
 }
