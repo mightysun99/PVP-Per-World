@@ -1,2 +1,3 @@
 #Enable PvP in the following world
 WorldOn: false
+LevelForPVP: world
